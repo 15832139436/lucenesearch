@@ -1,0 +1,25 @@
+server:
+  port: 8686
+  context-path: /lucene-search
+spring:
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+    multipart:
+      max-request-size: 100MB
+      max-file-size: 1000MB
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:localhost://3306/myku
+    username: root
+    password: root
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+mybatis:
+  configuration:
+    cache-enabled: true
+    cache-names: com.baizhi.cache.MyCache
+  type-aliases-package: com.baizhi.dao
